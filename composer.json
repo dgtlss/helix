@@ -1,0 +1,39 @@
+{
+    "name": "dgtlss/helix",
+    "description": "Advanced Installation Wizard for Laravel",
+    "keywords": ["laravel", "wizard", "installation", "quality of life"],
+    "version": "1.2.3",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nathan Langer",
+            "email": "nathanlanger@googlemail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dgtlss\\Helix\\": "src/"
+        },
+        "files": [
+			"src/helpers.php"
+		]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+            "dev-master": "4.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Dgtlss\\Helix\\ServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "laravel/framework": "^10.0.0"
+    }
+}
