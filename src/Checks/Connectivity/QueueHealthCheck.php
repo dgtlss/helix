@@ -1,6 +1,6 @@
 <?php
 
-namespace Dgtlss\Helix\Checks;
+namespace Dgtlss\Helix\Checks\Connectivity;
 
 use Dgtlss\Helix\Contracts\HealthCheck;
 use Dgtlss\Helix\Results\HealthCheckResult;
