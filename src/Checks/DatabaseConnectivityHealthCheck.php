@@ -16,17 +16,19 @@ class DatabaseConnectivityHealthCheck implements HealthCheck
             DB::connection()->getPdo();
             
             // If we got this far, the database connection is operational
-            return new HealthCheckResult(
+            $result = new HealthCheckResult(
                 HealthCheckResult::STATUS_OK,
                 'Database connectivity is operational.'
             );
         } catch (Exception $exception) {
             // If we got an exception, the database connection is not operational
-            return new HealthCheckResult(
+            $result = new HealthCheckResult(
                 HealthCheckResult::STATUS_CRITICAL,
                 'Failed to establish database connection.',
                 $exception->getMessage()
             );
         }
+
+        
     }
 }
